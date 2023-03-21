@@ -1,0 +1,15 @@
+.card_img{
+    height: 180px;
+    width: 100%;object-fit: cover;
+}
+
+.ad_div{
+    max-height: 100px;
+}
+
+.ad{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black ;
+}

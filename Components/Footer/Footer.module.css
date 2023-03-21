@@ -1,0 +1,45 @@
+.footer{
+    background-color: #1f2732;
+}
+
+.upper_border{
+    border-top: 1px solid white;
+}
+
+.logo_div{
+    padding: 10px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.font_size{
+    font-size: 16px;
+}
+
+.border{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 7px;
+    transition: 0.5s;
+}
+
+.border:hover{
+    background-color: red;
+}
+
+.li {
+    list-style:inside;
+    width: fit-content;
+}
+
+.ul{
+    width: fit-content;
+}
+

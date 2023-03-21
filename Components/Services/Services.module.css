@@ -1,0 +1,12 @@
+.image{
+    width: 160px;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 160px;
+    margin-bottom: 5px;
+}
+
+.services_div{
+    background-color: rgb(202, 202, 202);
+}
+
