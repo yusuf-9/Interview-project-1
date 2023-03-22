@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./ManageSchemes.module.css"
 
-export default function ManageScheme({ schemes }) {
-    useEffect(() => {
-        console.log(JSON.parse(schemes))
-    }, [])
+export default function ManageScheme({}) {
+
 
     return (
         <div className={`${styles.main_container} container-fluid  pt-5`}>
