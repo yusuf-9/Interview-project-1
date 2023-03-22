@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./ManageSchemes.module.css"
 
-export default function ManageScheme({}) {
+export default function ManageScheme() {
 
 
     return (
