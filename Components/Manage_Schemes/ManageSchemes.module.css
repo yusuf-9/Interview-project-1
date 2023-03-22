@@ -1,0 +1,11 @@
+.main_container{
+    background-color: #ececec;
+}
+
+.white_bg{
+    background-color: white;
+}
+
+.border{
+    border-bottom: 4px solid black;
+}

@@ -1,0 +1,21 @@
+.main_container{
+    background-color: #ececec;
+}
+
+.white_bg{
+    background-color: white;
+}
+
+.border{
+    border-bottom: 4px solid black;
+}
+
+.labels{
+    width: 190px;
+    padding-top: 5px;
+}
+
+.textarea{
+    resize: none;
+    height: 300px;
+}

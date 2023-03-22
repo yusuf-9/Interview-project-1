@@ -4,12 +4,22 @@ import styles from "./News_Carousel.module.css";
 
 export default function News_Carousel() {
 
+    
+  useEffect(()=>{
+    window.addEventListener("scroll", ()=>{
+      let container = document.getElementById("news_container")
+      container.style.marginTop = "2rem"
+      
+    })
+  }, [])
+
+
 
 
 
     return (
         <>
-            <div className="container">
+            <div className="container" id="news_container">
                 <div id="carouselExampleAutoplaying" class={`${styles.carousel} carousel slide carousel-dark mb-5`} data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

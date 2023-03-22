@@ -4,17 +4,13 @@ import styles from "./header.module.css";
 
 export default function Header() {
 
-  // useEffect(()=>{
-  //   window.addEventListener("scroll", ()=>{
-  //     let navbar = document.getElementById("navbar")
-  //     if(window.screenY > 50){
-  //       navbar.classList.add("fixed-top")
-  //     }
-  //     else{
-  //       navbar.classList.remove("fixed-top")
-  //     }
-  //   })
-  // }, [])
+  useEffect(()=>{
+    window.addEventListener("scroll", ()=>{
+      let navbar = document.getElementById("navbar")
+      navbar.classList.add("fixed-top")
+      
+    })
+  }, [])
 
 
   let date = new Date();
