@@ -1,17 +1,24 @@
 import DashboardNavbar from "@/Components/Dashboard_Navbar/DashboardNavbar";
 import ManageScheme from "@/Components/Manage_Schemes/ManageSchemes";
+import { db } from "@/lib/db";
 
 
-export default function ManageSchemes(){
-    
+export default function ManageSchemes(props){
 
     return (
         <>
             <DashboardNavbar />
-            <ManageScheme />
+            <ManageScheme data={props.data}/>
         </>
     )
 }
 
-
-
+export async function getServerSideProps(){
+    let queryString = "SELECT * from Schemes"
+    const response = await db.query(queryString)
+    return {
+        props: {
+            data: JSON.stringify(response)
+        }
+    }
+}

@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ManageSchemes.module.css"
 
-export default function ManageScheme() {
+export default function ManageScheme({data}) {
+    const [schemes, setSchemes] = useState(JSON.parse(data))
 
 
     return (
-        <div className={`${styles.main_container} container-fluid  pt-5`}>
+        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={()=>{console.log(schemes)}}>
             <div className={`container py-2 px-4`}>
                 <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-auto py-4">
