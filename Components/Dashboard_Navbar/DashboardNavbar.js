@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Nav.module.css"
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -20,12 +21,12 @@ export default function DashboardNavbar() {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Schemes
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Submit Scheme</a></li>
-                                <li><a class="dropdown-item" href="#">Manage Schemes</a></li>
+                                <li><Link class="dropdown-item" href="/dashboard/scheme_form">Submit Scheme</Link></li>
+                                <li><Link class="dropdown-item" href="/dashboard/manage_scheme">Manage Schemes</Link></li>
                             </ul>
                         </li>
                     </ul>

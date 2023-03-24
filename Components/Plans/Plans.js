@@ -19,7 +19,9 @@ export default function Plans({ data }) {
                                     <a href="#">
 
                                         <div class="card">
-                                            <Image class={`card-img-top ${styles.card_img}`} src={x.img} width={50} height={50} alt="Card image cap"></Image>
+                                            <div className={`${styles.image_div} container-fluid`}>
+                                                <Image class={`card-img-top ${styles.card_img}`} src={x.img} fill={true} alt="Card image cap"></Image>
+                                            </div>
 
                                             <div class="card-body">
                                                 <button className="btn btn-danger p-0 mb-2" >{x.main_category}</button>
@@ -56,14 +58,16 @@ export default function Plans({ data }) {
             <div className="container-fluid">
                 <h2>More plans</h2>
                 <div className="row my-4">
-                {
+                    {
                         schemes.slice(Math.ceil(schemes.length / 2)).map((x) => {
                             return (
                                 <div className="col-xl-3 col-lg-4 col-md-6  mt-5">
                                     <a href="#">
 
                                         <div class="card">
-                                            <Image class={`card-img-top ${styles.card_img}`} src={x.img} width={50} height={50} alt="Card image cap"></Image>
+                                        <div className={`${styles.image_div} container-fluid`}>
+                                                <Image class={`card-img-top ${styles.card_img}`} src={x.img} fill={true} alt="Card image cap"></Image>
+                                            </div>
 
                                             <div class="card-body">
                                                 <button className="btn btn-danger p-0 mb-2" >{x.main_category}</button>

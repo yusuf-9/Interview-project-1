@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ManageSchemes.module.css"
+import axios from "axios";
 
 export default function ManageScheme({ data }) {
     const [schemes, setSchemes] = useState(JSON.parse(data))
 
+    async function deleteScheme(x){
+        const data = await axios.post("/api/deleteScheme", {id: x})
+        if(data.status === 200){
+            window.alert("Scheme deleted successfully")
+            const row = document.getElementById(x);
+            const tbody = document.getElementById("table_body")
+            tbody.removeChild(row)
+
+        }
+    }
+
     return (
-        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={(e)=>{console.log(schemes)}}>
+        <div className={`${styles.main_container} container-fluid  pt-5`}>
             <div className={`container py-2 px-4`}>
                 <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-auto py-4">
@@ -41,13 +53,15 @@ export default function ManageScheme({ data }) {
                                     <th scope="col">Scheme End Date</th>
                                     <th scope="col">Scheme Author</th>
                                     <th scope="col">Last modified</th>
+                                    <th scope="col">Action</th>
+
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table_body">
                                 {schemes.map((x) => {
                                     return (
                                         <>
-                                            <tr>
+                                            <tr id={x.scheme_id}>
 
                                                 <td>
                                                     {schemes.indexOf(x) + 1}
@@ -72,6 +86,9 @@ export default function ManageScheme({ data }) {
                                                 </td>
                                                 <td>
                                                     {x.date_created}
+                                                </td>
+                                                <td>
+                                                    <button className="btn btn-danger" onClick={()=>{deleteScheme(x.scheme_id)}}>Delete</button>
                                                 </td>
                                             </tr>
                                         </>

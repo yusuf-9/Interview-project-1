@@ -28,12 +28,19 @@ export default function Form() {
 
     function submitForm(e){
         e.preventDefault();
+        const loader = document.getElementById("loading")
+        const message = document.getElementById("message")
+        loader.classList.remove("invisible");
+
         const upload = ref(storage, `images/${img.name}`)
             uploadBytes(upload, img).then((snapshot) => {
                 getDownloadURL(snapshot.ref).then((url) => {
                     axios.post("/api/postSchema", {schemeId, mainCategory, subCategory, title, titleEng, metaDesc, metaDescEng, startDate, endDate, tags, desc, url}).then((x)=>{
-                            console.log(x)
-                            console.log(url)
+                        if(x.data.status === "success"){
+                            loader.classList.add("invisible")
+                                message.classList.remove("invisible")
+
+                        }
                     })
                     })
             })
@@ -220,8 +227,11 @@ export default function Form() {
                                     <div className="col d-flex align-items-center justify-content-center">
                                         <input type="submit" value="Submit" className="btn btn-primary mx-2"/>
                                         <input type="reset" value="Reset" className="btn btn-danger mx-2" />
-
+                                        <div id='loading' className="lds-dual-ring invisible" ></div>
                                     </div>
+                                </div>
+                                <div className="container text-center invisible" id="message">
+                                    <h6>Scheme added successfully</h6>
                                 </div>
 
                             </div>
