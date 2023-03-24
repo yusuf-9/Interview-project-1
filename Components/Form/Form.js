@@ -66,7 +66,7 @@ export default function Form() {
         <>
             <div className={`${styles.main_container} container-fluid  pt-5`}>
                 <div className={`container py-2 px-4`}>
-                    <div className="row d-flex justify-content-between align-items-center">
+                    <div className="row d-flex justify-content-between mb-2 align-items-center">
                         <div className="col-auto py-4">
                             <h2>Schemes upload</h2>
                         </div>
@@ -94,13 +94,13 @@ export default function Form() {
                         <form onSubmit={(e)=>{submitForm(e)}} > 
                             <div className="col">
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 d-flex align-items-center">
                                         <span className={`${styles.labels} form-label`}>
                                             Scheme ID :
                                         </span>
                                         <input type="text" className="form-control" value={schemeId} readOnly disabled name="scheme_id" />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-md-6">
                                     </div>
                                 </div>
                                 <div className="row mt-3">
@@ -187,7 +187,7 @@ export default function Form() {
                                             
                                     </div>
                                         <div className="col-6 d-flex align-items-center">
-                                        <button className="btn btn-primary" onClick={addTag}>Add tag</button>
+                                        <button className="btn btn-primary mt-2" onClick={addTag}>Add tag</button>
                                         </div>
                                     <div className="col-6 d-flex align-items-center">
 

@@ -60,9 +60,9 @@ export default function Header() {
           </a>
         </div>
       </header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5" id="navbar">
+      <nav class="navbar  px-5 navbar-expand-lg navbar-dark bg-dark mb-5" id="navbar">
       <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
