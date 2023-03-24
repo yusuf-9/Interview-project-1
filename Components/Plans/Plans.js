@@ -18,7 +18,7 @@ export default function Plans({ data }) {
                                 <div className="col-xl-3 col-lg-4 col-md-6  mt-5">
                                     <a href="#">
 
-                                        <div class="card">
+                                        <div class={`${styles.hover_border} card`}>
                                             <div className={`${styles.image_div} container-fluid`}>
                                                 <Image class={`card-img-top ${styles.card_img}`} src={x.img} fill={true} alt="Card image cap"></Image>
                                             </div>
@@ -64,7 +64,7 @@ export default function Plans({ data }) {
                                 <div className="col-xl-3 col-lg-4 col-md-6  mt-5">
                                     <a href="#">
 
-                                        <div class="card">
+                                        <div class={`${styles.hover_border} card`}>
                                         <div className={`${styles.image_div} container-fluid`}>
                                                 <Image class={`card-img-top ${styles.card_img}`} src={x.img} fill={true} alt="Card image cap"></Image>
                                             </div>

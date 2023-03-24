@@ -104,7 +104,7 @@ export default function Form() {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex justify-content-between align-items-center">
+                                    <div className="col-md-6 mt-4 d-flex justify-content-between align-items-center">
                                         <span className={`${styles.labels} form-label`}>
                                             Main category :
                                         </span>
@@ -116,7 +116,7 @@ export default function Form() {
                                             <option value="category 5">Category 5</option>
                                         </select>
                                     </div>
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 mt-4 d-flex align-items-center">
                                         <span className={`${styles.labels} form-label`}>
                                             Sub category :
                                         </span>
@@ -130,13 +130,13 @@ export default function Form() {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 mt-3 d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             Scheme title :</span>
                                         <input type="text" className="form-control" onChange={(e)=>{setTitle(e.target.value)}} placeholder="Enter scheme title here" name="title" required/>
 
                                     </div>
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 mt-3 d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             Scheme title (English) :</span>
                                         <input type="text" className="form-control"  onChange={(e)=>{setTitleEng(e.target.value)}} placeholder="Enter scheme title in english here" name="title_eng" required />
@@ -160,13 +160,13 @@ export default function Form() {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 mt-2 d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             Start date :</span>
                                         <input type="date" className="form-control" onChange={(e)=>{setStateDate(e.target.value)}}  name="start_date" required/>
 
                                     </div>
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-md-6 mt-4  d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             End date :</span>
                                         <input type="date" className="form-control" onChange={(e)=>{setEndDate(e.target.value)}} name="end_date" required/>
@@ -174,7 +174,7 @@ export default function Form() {
                                     </div>
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-6 mt-2 d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             Tags :</span>
                                         <select className="form-select" name="tags" id="tags">
@@ -211,7 +211,7 @@ export default function Form() {
 
                                 </div>
                                 <div className="row mt-3">
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-lg-6 d-flex align-items-center">
                                         <span className={`${styles.labels}`}>
                                             Scheme Image :</span>
                                         <div class="custom-file">
@@ -219,7 +219,7 @@ export default function Form() {
                                         </div>
 
                                     </div>
-                                    <div className="col-6 d-flex align-items-center">
+                                    <div className="col-6 d-none d-lg-flex align-items-center">
 
                                     </div>
                                 </div>

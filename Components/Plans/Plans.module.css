@@ -32,3 +32,8 @@
     width: 100%;
     height: 180px;
 }
+
+
+.hover_border:hover{
+    border: 1px solid black;
+}
