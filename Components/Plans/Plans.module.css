@@ -13,3 +13,16 @@
     object-fit: cover;
     border: 1px solid black ;
 }
+
+.p_width {
+    min-height: 80px;
+    max-height: 80px;
+}
+
+.text_bold {
+    font-weight: bold;
+}
+
+.text_small{
+    /* font-size: 1rem; */
+}

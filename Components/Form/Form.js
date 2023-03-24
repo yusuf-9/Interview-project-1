@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styles from "./Form.module.css"
+import Link from "next/link";
 import axios from "axios";
 import { v4 } from "uuid";
 import storage from "../../lib/firebase"
@@ -77,7 +78,9 @@ export default function Form() {
                             <h4 className="text-primary">Schemes upload</h4>
                         </div>
                         <div className="col-auto">
+                            <Link href="/dashboard/manage_scheme">
                             <button className="btn btn-primary">Manage Schemes</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={`row ${styles.white_bg} py-3`}>

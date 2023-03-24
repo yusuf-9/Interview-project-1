@@ -5,7 +5,7 @@ export default function ManageScheme({ data }) {
     const [schemes, setSchemes] = useState(JSON.parse(data))
 
     return (
-        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={() => { console.log(schemes) }}>
+        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={(e)=>{console.log(schemes)}}>
             <div className={`container py-2 px-4`}>
                 <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-auto py-4">
@@ -36,48 +36,44 @@ export default function ManageScheme({ data }) {
                                     <th scope="col">Sr No</th>
                                     <th scope="col">Scheme Sategory</th>
                                     <th scope="col">Scheme Sub Category</th>
-                                    <th scope="col">Schemes Title</th>
-                                    <th scope="col">Schemes Start Date</th>
-                                    <th scope="col">Schemes End Date</th>
-                                    <th scope="col">Schemes Author</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Scheme Title</th>
+                                    <th scope="col">Scheme Start Date</th>
+                                    <th scope="col">Scheme End Date</th>
+                                    <th scope="col">Scheme Author</th>
                                     <th scope="col">Last modified</th>
-                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {schemes.map((x) => {
                                     return (
                                         <>
-                                            <td>
-                                                {schemes.indexOf(x) + 1}
-                                            </td>
-                                            <td>
-                                                {x.main_category}
-                                            </td>
-                                            <td>
-                                                {x.sub_category}
-                                            </td>
-                                            <td>
-                                                {x.title}
-                                            </td>
-                                            <td>
-                                                {x.start_date}
-                                            </td>
-                                            <td>
-                                                {x.end_date}
-                                            </td>
-                                            <td>
-                                                Admin
-                                            </td>
-                                            <td>
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                                                </div>
-                                            </td>
-                                            <td>
-                                                {x.date_created}
-                                            </td>
+                                            <tr>
+
+                                                <td>
+                                                    {schemes.indexOf(x) + 1}
+                                                </td>
+                                                <td>
+                                                    {x.main_category}
+                                                </td>
+                                                <td>
+                                                    {x.sub_category}
+                                                </td>
+                                                <td>
+                                                    {x.title}
+                                                </td>
+                                                <td>
+                                                    {x.start_date}
+                                                </td>
+                                                <td>
+                                                    {x.end_date}
+                                                </td>
+                                                <td>
+                                                    Admin
+                                                </td>
+                                                <td>
+                                                    {x.date_created}
+                                                </td>
+                                            </tr>
                                         </>
                                     )
                                 })}
