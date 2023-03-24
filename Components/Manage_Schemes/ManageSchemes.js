@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ManageSchemes.module.css"
 
-export default function ManageScheme({data}) {
+export default function ManageScheme({ data }) {
     const [schemes, setSchemes] = useState(JSON.parse(data))
 
-
     return (
-        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={()=>{console.log(schemes)}}>
+        <div className={`${styles.main_container} container-fluid  pt-5`} onClick={() => { console.log(schemes) }}>
             <div className={`container py-2 px-4`}>
                 <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-auto py-4">
@@ -31,7 +30,7 @@ export default function ManageScheme({data}) {
                 </div>
                 <div className={`row ${styles.white_bg} py-3`}>
                     <div className="table-responsive">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover text-center">
                             <thead>
                                 <tr>
                                     <th scope="col">Sr No</th>
@@ -46,6 +45,43 @@ export default function ManageScheme({data}) {
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                {schemes.map((x) => {
+                                    return (
+                                        <>
+                                            <td>
+                                                {schemes.indexOf(x) + 1}
+                                            </td>
+                                            <td>
+                                                {x.main_category}
+                                            </td>
+                                            <td>
+                                                {x.sub_category}
+                                            </td>
+                                            <td>
+                                                {x.title}
+                                            </td>
+                                            <td>
+                                                {x.start_date}
+                                            </td>
+                                            <td>
+                                                {x.end_date}
+                                            </td>
+                                            <td>
+                                                Admin
+                                            </td>
+                                            <td>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {x.date_created}
+                                            </td>
+                                        </>
+                                    )
+                                })}
+                            </tbody>
                         </table>
                     </div>
 

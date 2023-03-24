@@ -14,6 +14,7 @@ export default function ManageSchemes(props){
 }
 
 export async function getServerSideProps(){
+    await db.connect()
     let queryString = "SELECT * from Schemes"
     const response = await db.query(queryString)
     return {
